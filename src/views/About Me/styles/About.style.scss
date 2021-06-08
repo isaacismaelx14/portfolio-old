@@ -1,0 +1,256 @@
+@import "../../../assets/variables.scss";
+.about-me {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 70px;
+  color: #fff;
+}
+.icon-about-me {
+  width: 200px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.body {
+  p,
+  li {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 40px;
+    margin: 15px 0;
+  }
+  ul {
+    list-style: none;
+  }
+  .group,
+  .groupTwo {
+    & {
+      display: flex;
+      min-height: 100vh;
+      position: relative;
+    }
+    .float-btn {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .group {
+    background: $color6;
+  }
+  .groupTwo {
+    background: $color8;
+  }
+
+  #personal-profile,
+  #skills,
+  #technologies,
+  #hobies,
+  #goals-to-learn,
+  #languages {
+    & {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  #personal-profile {
+    & {
+      background: $color1;
+    }
+    .data {
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 800px;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .start,
+    .end {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .start {
+      width: 40%;
+      height: 100vh;
+      background: url("/img/screen_low.jpg");
+      object-fit: cover; /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      h2 {
+        font-size: 60px;
+      }
+    }
+    .end {
+      width: 60%;
+    }
+  }
+
+  #languages {
+    h2 {
+      font-size: 40px;
+    }
+    .data {
+      padding: 0 20px;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .spanish,
+    .english {
+      display: flex;
+      font-size: 23px;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  #skills,
+  #technologies {
+    & {
+      flex-direction: column;
+    }
+  }
+  #technologies {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  #languages,
+  #hobies,
+  #goals-to-learn {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 60%;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    li {
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  #skills,
+  #technologies,
+  #hobies,
+  #goals-to-learn {
+    .data {
+      padding: 0 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  .body {
+    #personal-profile {
+      flex-direction: column;
+
+      .start {
+        width: 100%;
+        height: 40vh;
+      }
+      .end {
+        width: 100%;
+        height: fit-content;
+        padding: 20px 0;
+      }
+    }
+
+    .group {
+      flex-direction: column;
+      justify-content: flex-end;
+      #skills {
+        min-height: fit-content;
+        margin: 30px 0;
+        margin-top: 70px;
+
+        .btn {
+          margin: 10px 0;
+        }
+      }
+      #technologies {
+        min-height: fit-content;
+        margin-bottom: 60px;
+        ul {
+          align-items: center;
+          justify-content: center;
+        }
+        .icon-about-me {
+          width: 100px;
+        }
+      }
+    }
+
+    .groupTwo {
+      flex-direction: column;
+      .btn {
+        display: none;
+      }
+    }
+
+    #languages {
+      margin-top: 60px;
+      .spanish,
+      .english {
+        font-size: 20px;
+      }
+    }
+
+    #languages,
+    #hobies,
+    #goals-to-learn {
+      min-height: fit-content;
+      margin-bottom: 50px;
+
+      justify-content: initial;
+      .data {
+        width: 100%;
+      }
+    }
+
+    #goals-to-learn {
+      margin-bottom: 100px;
+    }
+  }
+}

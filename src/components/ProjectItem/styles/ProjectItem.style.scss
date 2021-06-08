@@ -1,0 +1,122 @@
+@import "../../../assets/variables.scss";
+
+.project {
+  color: $colorFonts;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  padding: 0 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.body {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+/*
+*****************************
+*****************************
+*****************************
+************SPACE************
+*****************************
+*****************************
+*****************************
+*/
+
+// Animations
+.left-enter-active {
+  animation: leftInAni 0.4s ease-in-out;
+}
+
+.left-leave-active {
+  animation: leftOutAni 0.4s ease-in-out;
+}
+
+@keyframes leftInAni {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes leftOutAni {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+.right-enter-active {
+  animation: rightInAni 0.4s ease-in-out;
+}
+
+.right-leave-active {
+  animation: rightOutAni 0.4s ease-in-out;
+}
+
+@keyframes rightInAni {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes rightOutAni {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

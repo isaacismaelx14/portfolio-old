@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "title": "Store in react",
+    "description": ["<p>This project is an store created in React.</p>"],
+    "img": "https://i.imgur.com/UereIWL.jpg",
+    "github": "https://github.com/isaacismaelx14/store-react"
+  }
+]
