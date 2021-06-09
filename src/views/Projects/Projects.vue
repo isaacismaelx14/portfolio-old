@@ -8,6 +8,15 @@
         class="carousel-container"
         :useButtons="projects.length > 1"
       >
+        <div
+          class="container text-center"
+          style="transform: scale(1.5);"
+          v-if="isLoading"
+        >
+          <div class="spinner-border text-primary mt-4" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
         <project-item
           v-for="(projectItem, index) in projects"
           :key="projectItem.id"
@@ -15,6 +24,7 @@
           :visibleItem="actualSlide"
           :index="index"
           :direction="direction"
+          v-else
         />
       </carousel>
     </div>

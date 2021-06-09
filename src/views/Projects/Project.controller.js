@@ -13,6 +13,7 @@ const data = () => ({
   actualSlide: 0,
   direction: "left",
   description: null,
+  isLoading: false,
 });
 
 const components = {
@@ -48,7 +49,9 @@ export default {
   methods,
   computed,
   mounted: async function() {
+    this.isLoading = true;
     const res = await axios.get("/api/projects");
     this.projects = res.data;
+    this.isLoading = false;
   },
 };
