@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import AboutMe from "../views/About Me/AboutMe.vue";
 import Projects from "../views/Projects/Projects.vue";
 import Contact from "../views/Contact.vue";
+import NotFound from "../views/NotFound.vue";
 // import addProject from "../views/admin/addProject.vue";
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
   //   name: "Admin_AddProject",
   //   component: addProject,
   // },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "notFound",
+    component: NotFound,
+  },
 ];
 
 const router = createRouter({

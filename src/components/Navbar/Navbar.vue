@@ -47,13 +47,13 @@ export default {
       openMenu: false,
       showMenuBtn: { hover: false, toLeave: false },
       activeRoute: { route: null },
-      actualRoute: null,
+      actualRoute: null
     };
   },
   methods: {
     showMenu: function() {
       this.openMenu = !this.openMenu;
-    },
+    }
   },
   watch: {
     $route(to) {
@@ -64,38 +64,38 @@ export default {
       if (this.openMenu)
         gsap.from(".nav-item", {
           delay: 0.1,
-          opacity: 0,
+          opacity: 0
         });
       this.showMenuBtn.hover = this.openMenu;
       this.showMenuBtn.toLeave = this.openMenu;
-    },
+    }
   },
   mounted: function() {
     gsap.from(".nav-item", {
       duration: 1.3,
       opacity: 0,
-      x: 40,
+      x: 40
     });
     gsap.from(".brackets", {
       duration: 0.3,
       delay: 0.5,
       opacity: 0,
       y: -40,
-      ease: "bounce",
+      ease: "bounce"
     });
     gsap.from("#HeaderTitleI", {
       duration: 1,
       opacity: 0,
       y: 60,
-      ease: "bounce",
+      ease: "bounce"
     });
     gsap.from("#MobileShowMenuButton", {
       duration: 1,
       opacity: 0,
       x: -60,
-      ease: "bounce",
+      ease: "bounce"
     });
-  },
+  }
 };
 </script>
 
@@ -185,9 +185,7 @@ header {
   }
 
   /* Smartphones ----------- */
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (min-device-pixel-ratio: 1.5) and (max-width: 600px) {
+  @media screen and (max-width: 576px) {
     .no-mobile {
       display: none;
     }
@@ -250,24 +248,6 @@ header {
         border-bottom: none;
         border-top: none;
       }
-    }
-  }
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape),
-    only screen and (min-device-pixel-ratio: 1.5) and (max-width: 600px) and (orientation: landscape) {
-    .menu-mobile {
-      min-height: 100%;
-      height: fit-content;
-    }
-
-    .nav-item {
-      &:last-child {
-        position: relative;
-      }
-    }
-
-    .movile-nav {
-      height: fit-content;
     }
   }
 }

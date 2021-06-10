@@ -2,6 +2,11 @@
 Porfolio created on VUe.js
 
 🔗https://portfolio-isaac-mart.herokuapp.com/ (Still Working)
+
+--- 
+
+### To do:
+- **Fix navigation:** When navigate the scroll don't comeback to top.
 ## Project setup
 ```
 yarn install

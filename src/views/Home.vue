@@ -43,24 +43,24 @@ export default {
     gsap.from("#ProfileImg", {
       duration: 1,
       scale: 2.5,
-      opacity: 0,
+      opacity: 0
     });
     gsap.from("#HeaderTitle", {
       x: -20,
       opacity: 0,
-      delay: 0.5,
+      delay: 0.5
     });
     gsap.from("#HeaderButtons", {
       y: 30,
       opacity: 0,
-      delay: 1,
+      delay: 1
     });
     gsap.from(".subtitle", {
       x: 20,
       opacity: 0,
-      delay: 1.3,
+      delay: 1.3
     });
-  },
+  }
 };
 </script>
 
@@ -124,8 +124,7 @@ export default {
     }
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5) and (max-width: 600px) {
+@media screen and (max-width: 576px) {
   .container-centered {
     & {
       height: 80%;
@@ -145,13 +144,5 @@ export default {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape),
-  only screen and (min-device-pixel-ratio: 1.5) and (max-width: 600px) and (orientation: landscape) {
-  .container-centered {
-    & {
-      height: 100%;
-    }
-  }
-}
 /* Smartphones - */
 </style>

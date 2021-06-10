@@ -6,6 +6,15 @@
   </PageTemplate>
 </template>
 
+<script lang="ts">
+import PageTemplate from "./components/templates/PageTemplate.vue";
+export default {
+  components: {
+    PageTemplate
+  }
+};
+</script>
+
 <style lang="scss">
 @import "./assets/variables.scss";
 * {
@@ -113,8 +122,7 @@ body::-webkit-scrollbar {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5) {
+@media screen and (max-width: 576px) {
   .btn {
     font-size: 15px;
   }
@@ -126,15 +134,6 @@ body::-webkit-scrollbar {
   }
 }
 </style>
-
-<script lang="ts">
-import PageTemplate from "./components/templates/PageTemplate.vue";
-export default {
-  components: {
-    PageTemplate
-  }
-};
-</script>
 
 <style lang="scss">
 .use-bootstrap {
