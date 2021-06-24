@@ -72,7 +72,7 @@ export default {
       try {
         if (name && email && message) {
           await axios.post("/api/send-mail", {
-            body: `${message} \n email: ${email}`,
+            body: `${message} \nemail: ${email}`,
             subject: `${name} <${company}>`,
           });
 
