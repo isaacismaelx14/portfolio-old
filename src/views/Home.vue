@@ -10,6 +10,7 @@
               title="Isaac Martinez"
               id="ProfileImg"
               class="no-selection"
+              loading="lazy"
             />
             <div class="subtitle">Frontend &amp; Backend</div>
             <div class="subtitle">Developer</div>
@@ -36,31 +37,31 @@ import gsap from "gsap";
 
 export default {
   name: "Home",
-  created: function() {
+  created: function () {
     document.title = "Portfolio - Isaac Martinez"; //Temp
   },
-  mounted: function() {
+  mounted: function () {
     gsap.from("#ProfileImg", {
       duration: 1,
       scale: 2.5,
-      opacity: 0
+      opacity: 0,
     });
     gsap.from("#HeaderTitle", {
       x: -20,
       opacity: 0,
-      delay: 0.5
+      delay: 0.5,
     });
     gsap.from("#HeaderButtons", {
       y: 30,
       opacity: 0,
-      delay: 1
+      delay: 1,
     });
     gsap.from(".subtitle", {
       x: 20,
       opacity: 0,
-      delay: 1.3
+      delay: 1.3,
     });
-  }
+  },
 };
 </script>
 
