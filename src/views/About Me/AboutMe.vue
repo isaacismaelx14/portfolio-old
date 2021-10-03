@@ -4,7 +4,7 @@
       <!-- Body -->
       <div class="body" id="top">
         <!-- Personal Profile -->
-        <section id="personal-profile" class="section">
+        <div class="section" id="personal-profile">
           <div class="start">
             <h2 id="titleAbout1">About me</h2>
             <div class="btn-group">
@@ -37,7 +37,7 @@
               </p>
             </div>
           </div>
-        </section>
+        </div>
         <!-- End Personal profile -->
         <!-- Group-->
         <div class="group section" id="skills-section">
