@@ -46,7 +46,7 @@
             <h2>Skills</h2>
             <div class="data">
               <ul>
-                <li>- Autodidact</li>
+                <li>- Self-learner</li>
                 <li>- Knowledge in Backend and Frontend</li>
                 <li>
                   - Basic knowledge in database management and server
@@ -59,7 +59,7 @@
                 <li>- English &amp; Spanish</li>
               </ul>
             </div>
-            <a class="btn" href="#idioms">See Idioms skills</a>
+            <a class="btn" href="#idioms">See language skills</a>
           </section>
           <!-- Technologies -->
           <section id="technologies" class="panel">
@@ -87,7 +87,7 @@
         <div class="groupTwo section" id="idioms">
           <!-- Languages -->
           <section id="languages" class="panel">
-            <h2>Idioms</h2>
+            <h2>Languages</h2>
             <div class="data">
               <div class="spanish">
                 <span>Spanish</span>
