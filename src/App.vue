@@ -13,6 +13,13 @@ export default {
     PageTemplate
   }
 };
+
+const URLdomain = window.location.host;
+
+if(process.env.NODE_ENV === "production" && URLdomain !== "www.isaacmartinez.dev"){
+   window.location.href = "https://www.isaacmartinez.dev";
+}
+
 </script>
 
 <style lang="scss">
