@@ -50,7 +50,9 @@ export default {
   computed,
   mounted: async function() {
     this.isLoading = true;
-    const res = await axios.get("/api/projects");
+    const res = await axios.get(
+      "https://portfoliobackndimart.herokuapp.com/api/projects"
+    );
     this.projects = res.data;
     this.isLoading = false;
   },
