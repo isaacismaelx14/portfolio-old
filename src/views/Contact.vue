@@ -71,10 +71,14 @@ export default {
       const { name, company, email, message } = this.formData;
       try {
         if (name && email && message) {
-          await axios.post("/api/send-mail", {
-            body: `${message} \nemail: ${email}`,
-            subject: `${name} <${company}>`,
-          });
+          await axios.post(
+            "https://portfoliobackndimart.herokuapp.com/api/send-mail",
+            {
+              body: `${message} \nemail: ${email}`,
+
+              subject: `${name} <${company}>`,
+            }
+          );
 
           this.formData = {
             name: null,
