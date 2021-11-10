@@ -10,10 +10,10 @@
       >
         <div
           class="container text-center"
-          style="transform: scale(1.5);"
           v-if="isLoading"
+          style="transform: scale(1.5); width:50px"
         >
-          <div class="spinner-border text-primary mt-4" role="status">
+          <div class="spinner-border text-primary mt-4"  role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>

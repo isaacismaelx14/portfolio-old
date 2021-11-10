@@ -12,8 +12,10 @@
     </metadata>
     <g
       transform="translate(0.000000,141.000000) scale(0.100000,-0.100000)"
-      fill="#000000"
-      stroke="none"
+      fill="#000"
+      stroke="#fff"
+     stroke-width="30"
+      stroke-linecap="round"  stroke-linejoin="round"
     >
       <path
         d="M510 1029 c-78 -24 -157 -108 -182 -193 -18 -63 -15 -202 7 -265 24

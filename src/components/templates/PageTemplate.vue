@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div id="main">
     <navbar />
-    <slot />
+    
+    <div id="view">
+      <slot />
+    </div>
     <!-- <h2>Footer</h2> -->
   </div>
 </template>

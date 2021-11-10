@@ -69,7 +69,6 @@ export default {
 @import "../assets/variables.scss";
 
 .home {
-  position: relative;
   z-index: 1;
   width: 100%;
 }
