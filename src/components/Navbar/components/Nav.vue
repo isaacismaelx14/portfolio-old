@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link to="/about-me" class="nav-item" active-class="active-link">
-      About Me
+      About me
     </router-link>
     <router-link to="/projects" class="nav-item" active-class="active-link">
       Projects
