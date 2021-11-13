@@ -185,9 +185,9 @@ form {
   }
 
   .btn {
-    background: #532786;
+    background: $color9;
     &:disabled {
-      background: #5c5c5c;
+      background: $color10;
       &:hover {
         box-shadow: 0 0 0 0;
         cursor: not-allowed;

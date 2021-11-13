@@ -4,8 +4,8 @@
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="48"
-      height="48"
+      width="40"
+      height="40"
       viewBox="0 0 171 171"
       style="fill: #000000"
     >

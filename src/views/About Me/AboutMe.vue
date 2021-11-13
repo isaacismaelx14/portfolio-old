@@ -8,7 +8,7 @@
           <div class="start">
             <h2 id="titleAbout1">About me</h2>
             <div class="btn-group">
-              <a class="btn" href="/pdf/cv-resume.pdf" target="_blank"
+              <a class="btn cv_btn" href="/pdf/cv-resume.pdf" target="_blank"
                 >Download CV Resume</a
               >
               <a class="btn" href="#skills-section">See skills</a>

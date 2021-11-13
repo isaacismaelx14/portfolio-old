@@ -1,20 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
-$colorDominant: #f5f5ff;
-$colorNavbar: #f5f5ff;
-$colorFonts: #1b1b1b;
-$color1: #4447f8;
+:root {
+  --color1: #4447f8;
+  --color2: #8e90f9;
+  --color3: #3735c4;
+  --color4: #202278;
+  --color5: #445b78;
+  --color6: #40186a;
+  --color6Dark: #2b1049;
+  --color7: #53004c;
+  --color8: #1d4897;
+  --color9: #532786;
+  --color10: #5c5c5c;
+  --colorDominant: #f5f5ff;
+  --colorNavbar: var(--colorDominant);
+  --colorFonts: #1b1b1b;
+  --colorAlt:var(--color1);
+  --aboutCover: url("/img/screen_low.jpg");
 
-$color2: #8e90f9;
-$color3: #3735c4;
-$color4: #202278;
-$color5: #445b78;
-$color6: #40186a;
-$color6Dark: #2b1049;
-$color7: #53004c;
-$color8: #1d4897;
+  --colorBottomNav: var(--colorFonts);
 
-$gradient1: linear-gradient(180deg, $color7 0%, $color6 100%);
-$gradient2: linear-gradient(180deg, $color6 0%, $color7 100%);
+  --gradient1: linear-gradient(180deg, --color7 0%, --color6 100%);
+  --gradient2: linear-gradient(180deg, --color6 0%, --color7 100%);
+
+  --dancingScript-font: "Dancing Script", cursive;
+
+  body.dark-mode {
+    --color1: #363aad;
+    --color2: #8e90f9;
+    --color3: #3735c4;
+    --color4: #202278;
+    --color5: #445b78;
+    --color6: #1b1b1b;
+    --color6Dark: #242424;
+    --color7: #53004c;
+    --color8: #30343d;
+    --color9: #181818;
+    --color10: #5c5c5c;
+    --colorDominant: #121212;
+    --colorNavbar: var(--colorDominant);
+    --colorBottomNav: var(--color1);
+    --colorFonts: #f5f5ff;
+    --colorAlt:#323677;
+    --aboutCover: url("/img/screen_low_black.jpg");
+  }
+}
+
+
+$colorDominant: var(--colorDominant);
+$colorNavbar: var(--colorNavbar);
+$colorBottomNav: var(--colorBottomNav);
+$colorFonts: var(--colorFonts);
+$color1: var(--color1);
+$color2: var(--color2);
+$color3: var(--color3);
+$color4: var(--color4);
+$color5: var(--color5);
+$color6: var(--color6);
+$color6Dark: var(--color6Dark);
+$color7: var(--color7);
+$color8: var(--color8);
+$color9: var(--color9);
+$color10: var(--color10);
+$colorAlt: var(--colorAlt);
+$aboutCover: var(--aboutCover);
+
+$gradient1: var(--gradient1);
+$gradient2: var(--gradient2);
+
+
+
 
 $dancingScript-font: "Dancing Script", cursive;

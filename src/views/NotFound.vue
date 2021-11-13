@@ -8,7 +8,7 @@
             Error 404
           </span>
           <br />
-          <span class="display-4">Page not found</span>
+          <span class="display-4 text-p">Page not found</span>
           <br />
 
           <router-link to="/" class="btn btn-danger">Go home</router-link>
@@ -116,7 +116,9 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
+.text-p{
+  color: var(--colorFonts)
+}
 .glitch {
   font-size: 130px;
   line-height: 1;

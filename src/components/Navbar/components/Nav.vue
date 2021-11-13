@@ -9,10 +9,14 @@
     <router-link to="/contact" class="nav-item" active-class="active-link">
       Contact
     </router-link>
+
+    <Slider class="no-mobile nav-item"/>
+
     <a
       href="https://github.com/isaacismaelx14"
-      class="nav-item"
+      class="nav-item no-mobile"
       target="_blank"
+      
     >
       <GithubIcon
         style="width: 40px"
@@ -21,25 +25,18 @@
         :hover="hoverOnGit"
         class="no-mobile"
       />
-      <GithubIcon
-        style="width: 40px"
-        @mouseover="hoverOnGit = true"
-        @mouseleave="hoverOnGit = false"
-        :hover="hoverOnGit"
-        class="mobile-only"
-        catColor="#4447f8"
-      />
-      <span class="mobile-only">Github page</span>
+
     </a>
   </div>
 </template>
 
 <script>
 import GithubIcon from "../../Icons/GithubIcon";
+import Slider from './Slider';
 
 export default {
   name: "Nav",
-  components: { GithubIcon },
+  components: { GithubIcon, Slider},
   data: function() {
     return { hoverOnGit: false };
   },
