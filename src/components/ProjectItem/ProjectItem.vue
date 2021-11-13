@@ -2,18 +2,12 @@
   <transition :name="direction" mode="in-out">
     <div class="project item" v-show="visibleItem === index">
       <div class="top">
-        <div class="header">
+        <div class="header" v-show="item.useTitle">
           <h2 class="title">{{ item.title }}</h2>
         </div>
 
         <div class="body">
-          <div
-            v-html="
-              typeof item.description !== 'string'
-                ? item.description.join('')
-                : item.description
-            "
-          ></div>
+          <div v-html="getItem(item)"></div>
           <img :src="item.img" :alt="item.title" v-if="item.img" />
         </div>
       </div>

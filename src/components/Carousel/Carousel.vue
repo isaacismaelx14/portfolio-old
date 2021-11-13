@@ -11,12 +11,13 @@
       prev
     </button>
   </section>
+  
 </template>
 
 <script lang="ts">
-export { default } from "./carousel.controller";
+  export { default } from "./carousel.controller";
 </script>
 
 <style lang="scss" scoped>
-@import "./styles/carousel.style.scss";
+  @import "./styles/carousel.style.scss";
 </style>
