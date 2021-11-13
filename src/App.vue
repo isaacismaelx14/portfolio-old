@@ -17,7 +17,7 @@ if (
   window.location.href = "https://www.isaacmartinez.dev";
 }
 
-const isDarkMode = () => {
+const getDefault = () => {
   if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -26,15 +26,26 @@ const isDarkMode = () => {
   return false;
 };
 
+const isDarkMode = (varName) => {
+  const storagedValue = localStorage.getItem(varName);
+  if (storagedValue){
+    return storagedValue === "true";
+  }
+  return getDefault();
+};
+
 export default {
   components: {
     PageTemplate,
   },
   mounted: function() {
-    isDarkMode() ? this.setDarkMode(true) : this.setDarkMode(false);
+    isDarkMode(this.localStorageName)
+      ? this.setDarkMode(true)
+      : this.setDarkMode(false);
   },
   computed: {
     ...mapState("schemeTheme", ["darkMode"]),
+    ...mapState("schemeTheme", ["localStorageName"]),
   },
   methods: {
     ...mapMutations("schemeTheme", ["setDarkMode"]),
@@ -115,6 +126,4 @@ body::-webkit-scrollbar {
 .btn-primary {
   background: $color1;
 }
-
 </style>
-
