@@ -59,7 +59,7 @@
                 <li>- English &amp; Spanish</li>
               </ul>
             </div>
-            <a class="btn" href="#idioms">See language skills</a>
+            <a class="btn" href="#idioms">Language skills</a>
           </section>
           <!-- Technologies -->
           <section id="technologies" class="panel">

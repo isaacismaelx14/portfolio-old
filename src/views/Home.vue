@@ -4,12 +4,10 @@
       <div class="container-centered">
         <div class="title-area">
           <div class="img-container">
-            <img
-              src="/img/isaac.jpg"
-              alt="Isaac Martinez Photo"
-              title="Isaac Martinez"
+            <div
+              
               id="ProfileImg"
-              class="no-selection"
+              class="no-selection img"
               loading="lazy"
             />
             <div class="subtitle">Frontend &amp; Backend</div>
@@ -34,11 +32,16 @@
 
 <script lang="ts">
 import gsap from "gsap";
+import { mapState } from "vuex";
+
 
 export default {
   name: "Home",
   created: function () {
     document.title = "Portfolio - Isaac Martinez"; //Temp
+  },
+    computed: {
+    ...mapState("schemeTheme", ["darkMode"]),
   },
   mounted: function () {
     gsap.from("#ProfileImg", {
@@ -96,12 +99,18 @@ export default {
     }
 
     .img-container {
-      img {
+      .img {
         border-radius: 50%;
         box-shadow: 0 0 0 6px $color1;
-        width: 200px;
+        width: 180px;
+        height: 180px;
         object-fit: contain;
-        margin-bottom: 10px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background: $colorDominant;
+        background: $meImage;
+        background-size: cover;
+        background-position: center;
       }
     }
     .title {
@@ -132,8 +141,9 @@ export default {
 
     .title-area {
       .img-container {
-        img {
+        .img {
           width: 150px;
+          height: 150px;
         }
       }
       .title {

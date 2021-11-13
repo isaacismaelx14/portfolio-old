@@ -15,8 +15,9 @@
   --colorDominant: #f5f5ff;
   --colorNavbar: var(--colorDominant);
   --colorFonts: #1b1b1b;
-  --colorAlt:var(--color1);
+  --colorAlt: var(--color1);
   --aboutCover: url("/img/screen_low.jpg");
+  --meImage: url("/img/isaac.jpg");
 
   --colorBottomNav: var(--colorFonts);
 
@@ -35,17 +36,17 @@
     --color6Dark: #242424;
     --color7: #53004c;
     --color8: #30343d;
-    --color9: #181818;
+    --color9: var(--color1);
     --color10: #5c5c5c;
     --colorDominant: #121212;
     --colorNavbar: var(--colorDominant);
     --colorBottomNav: var(--color1);
     --colorFonts: #f5f5ff;
-    --colorAlt:#323677;
-    --aboutCover: url("/img/screen_low_black.jpg");
+    --colorAlt: #323677;
+    // --aboutCover: url("/img/screen_low_black.jpg");
+    // --meImage: url("/img/isaac-b&w.jpg");
   }
 }
-
 
 $colorDominant: var(--colorDominant);
 $colorNavbar: var(--colorNavbar);
@@ -64,11 +65,19 @@ $color9: var(--color9);
 $color10: var(--color10);
 $colorAlt: var(--colorAlt);
 $aboutCover: var(--aboutCover);
+$meImage: var(--meImage);
 
 $gradient1: var(--gradient1);
 $gradient2: var(--gradient2);
 
-
-
-
 $dancingScript-font: "Dancing Script", cursive;
+
+// Implementi this in a future update:
+
+/* **********************************
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
+********************************** */
