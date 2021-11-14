@@ -2,7 +2,7 @@
   <label class="switch" ref="switch_button">
     <input type="checkbox" v-model="darkMode" @click="switchMode()" />
     <span class="slider round"></span>
-    <span class="actual_mode">{{darkMode ? "Dark Mode" : "Light"}}</span>
+    <span class="actual_mode">{{darkMode ? "Dark" : "Light"}}</span>
   </label>
 </template>
 
