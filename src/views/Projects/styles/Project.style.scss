@@ -13,18 +13,17 @@
 .header {
   margin: 20px 0;
   width: 100%;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 40px;
   font-weight: 100;
-  position: relative;
-  z-index: 9;
 }
 
 .carousel-container {
   min-height: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
   
 }
 
@@ -37,11 +36,11 @@
 @media screen and (max-width: 576px) {
   .body {
     flex-direction: column;
-      padding-bottom: 49px;
+    padding-bottom: 49px;
   }
 
   .header {
-    height: 50%;
+    padding: 40px 0;
   }
   .carousel-container {
     height: 900px;

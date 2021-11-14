@@ -42,10 +42,13 @@ export default {
     isDarkMode(this.localStorageName)
       ? this.setDarkMode(true)
       : this.setDarkMode(false);
+
+      console.log(this.server());
   },
   computed: {
     ...mapState("schemeTheme", ["darkMode"]),
     ...mapState("schemeTheme", ["localStorageName"]),
+    ...mapState(["server"])
   },
   methods: {
     ...mapMutations("schemeTheme", ["setDarkMode"]),

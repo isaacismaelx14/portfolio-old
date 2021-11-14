@@ -1,6 +1,7 @@
 import Carousel from "@/components/Carousel/Carousel.vue";
 import ProjectItem from "@/components/ProjectItem/ProjectItem.vue";
 import axios from "axios";
+import { mapState } from "vuex";
 
 const name = "Projects";
 
@@ -25,6 +26,7 @@ const computed = {
   slideLen() {
     return this.projects.length - 1;
   },
+  ...mapState(["server"]),
 };
 
 const methods = {
@@ -50,9 +52,7 @@ export default {
   computed,
   mounted: async function() {
     this.isLoading = true;
-    const res = await axios.get(
-      "https://portfoliobackndimart.herokuapp.com/api/projects"
-    );
+    const res = await axios.get(`${this.server()}/api/projects`);
     this.projects = res.data;
     this.isLoading = false;
   },

@@ -14,7 +14,6 @@
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .header {
@@ -27,7 +26,6 @@
   overflow: auto;
   img {
     width: 100%;
-    margin-bottom: 20px;
   }
   p {
     margin-bottom: 10px;
@@ -41,7 +39,8 @@
   align-items: end;
   justify-content: flex-end;
   padding: 0 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 /*
