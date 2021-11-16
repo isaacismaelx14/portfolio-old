@@ -10,6 +10,7 @@ const created = function() {
 
 const data = () => ({
   projects: [],
+  isLoading: false,
 });
 
 const components = {
