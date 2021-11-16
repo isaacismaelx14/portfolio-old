@@ -12,7 +12,9 @@ Porfolio created on VUe.js
 
 - **DARK MODE 🌙:** I added the dark mode option.
 - **AUTO DARK MODE ⚙️:** Now the web detects if your system is using dark mode or not to adjust the colors 👍.
-- **KEEP THE THEME MODE PREFERRED 📁:** Save your current theme mode and save in localStorage
+- **KEEP THE THEME MODE PREFERRED 📁:** Save your current theme mode and save in localStorage.
+- **MORDEN PROJECTS CARDS ⬆️** Now the project's cards are more morden.
+
 
 
 
