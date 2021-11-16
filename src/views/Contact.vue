@@ -51,6 +51,8 @@
 <script>
 import axios from "axios";
 import Toastify from "toastify-js";
+import { mapState } from "vuex";
+
 export default {
   name: "Contact",
   data: () => {
@@ -72,14 +74,13 @@ export default {
       try {
         if (name && email && message) {
           await axios.post(
-            "https://portfoliobackndimart.herokuapp.com/api/send-mail",
+            `${this.server()}/api/send-mail`,
             {
               body: `${message} \nemail: ${email}`,
 
               subject: `${name} <${company}>`,
             }
           );
-
           this.formData = {
             name: null,
             company: null,
@@ -110,6 +111,7 @@ export default {
   created: function() {
     document.title = "Contact - Isaac Martinez"; //Temp
   },
+  computed: {...mapState(["server"]),}
 };
 </script>
 
