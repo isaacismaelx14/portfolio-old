@@ -60,8 +60,9 @@ export default {
           opacity: 0,
         });
       this.showMenuBtn.hover = this.openMenu;
-      this.showMenuBtn.toLeave = this.openMenu;
-      console.log("Open");
+this.showMenuBtn.toLeave = this.openMenu;
+
+
       document.body.style.overflow = this.openMenu ? "hidden" : "auto";
       document.getElementById("view").classList.toggle("no-scroll");
     },

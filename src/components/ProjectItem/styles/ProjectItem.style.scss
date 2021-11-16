@@ -1,124 +1,176 @@
 @import "../../../assets/variables.scss";
-.project {
-  color: $colorFonts;
+
+$curve: 20px;
+$colorDus: $color6;
+.card {
+  position: relative;
+  display: block;
+  min-height: 100%;  
+  border-radius: $curve;
+  overflow: hidden;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+}
+
+
+.title {
+  font-size: 25px;
+  ;
+}
+
+.card_image {
+  width: 100%;
+  height: auto;
+
+}
+
+.card__overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  padding: 0 20px;
-  padding-top: 20px;
+  z-index: 1;      
+  border-radius: $curve;    
+  background-color:$colorDus;      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+
+.card__header {
+  position: relative;
   display: flex;
-  flex-direction: column;
-
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius:$curve 0 0 0;    
+  background-color: $colorDus;
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
 }
 
-.header {
-  font-size: 25px;
-  margin-bottom: 20px;
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
 }
 
-.body {
+.card__arc path {
+  fill: $colorDus;
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 24px;
+  margin: 0 0 .3em;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-size: .8em; 
+}
+
+.card__tag{
+  padding: 3px 10px;
+  background: $color1;
+
+  border-radius:5px;
+}
+
+.card__tags {
+  font-size: .8em;
   width: 100%;
-  overflow: auto;
-  img {
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+
+.card__description {
+    // display: -webkit-box; //keep commented until  I find out  is this 😂 
+  // -webkit-box-orient: vertical;
+  // -webkit-line-clamp: 6;
+  padding: 0 2em 2em;
+  margin: 0;
+  overflow: hidden;
+  p{
+    text-align: justify;
+  }
+  .card__link{
     width: 100%;
-  }
-  p {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
   }
 
-}
+  .btn__github{
+    background: $color9;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: .8em;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    margin-top: 17px;
+    font-size: 15px;
+  }
+}    
 
-.footer {
-  width: 100%;
-  display: flex;
-  align-items: end;
-  justify-content: flex-end;
-  padding: 0 10px;
-  margin-bottom: 50px;
-  margin-top: 30px;
-}
+@media (max-width: 768px) {
 
-/*
-*****************************
-*****************************
-*****************************
-************SPACE************
-*****************************
-*****************************
-*****************************
-*/
+  .card__overlay {
+    position: static;
+    bottom: none;
+    left: none;
+    right: none;
+    z-index: 0;
+    border-radius: none;
+    transform: translateY(-4px);
+    transition: none;
 
-// Animations
-.left-enter-active {
-  animation: leftInAni 0.4s ease-in-out;
-}
+  }
 
-.left-leave-active {
-  animation: leftOutAni 0.4s ease-in-out;
-}
+  .card:hover .card__overlay {
+    transform: translateY(-4px);
+  }
 
-@keyframes leftInAni {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
+  .card__header {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: 0;
+    transform: none;
+    transition: none;
   }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes leftOutAni {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  15% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}
-.right-enter-active {
-  animation: rightInAni 0.4s ease-in-out;
-}
 
-.right-leave-active {
-  animation: rightOutAni 0.4s ease-in-out;
-}
+  .card__arc {
+    display: none;
+  }
 
-@keyframes rightInAni {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes rightOutAni {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  15% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
+  .card:hover .card__header {
+    transform: none;
   }
 }

@@ -1,28 +1,41 @@
 <template>
   <transition :name="direction" mode="in-out">
-    <div class="project item" v-show="visibleItem === index">
-      <div class="top">
-        <div class="header" v-show="item.useTitle">
-          <h2 class="title">{{ item.title }}</h2>
-        </div>
+    <li class="project item">
+      <div class="card">
+        <img :src="item.img" alt="" class="card_image" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+              <path />
+            </svg>
+            <div class="card__header-text">
+              <h3 class="card__title">{{ item.title }}</h3>
+              <div class="card__tags">
+                <span
+                  v-for="(tag, index) in item.tags"
+                  :key="index"
+                  :index="index"
+                  class="card__tag"
+                >
+                  {{ tag }}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card__description">
+            <p>{{ item.summary }}</p>
+            <div class="card__link">
+              <a :href="item.github" target="_blank" class="btn__github">
+                <span class="">
+                  View on github
+                </span>
+              </a>
+            </div>
 
-        <div class="body">
-          <div v-html="getItem(item)"></div>
-          <img :src="item.img" :alt="item.title" v-if="item.img" />
+          </div>
         </div>
       </div>
-
-      <div class="footer">
-        <a
-          class="btn btn-danger"
-          :href="item.github"
-          v-if="item.github"
-          target="_blank"
-        >
-          View on github
-        </a>
-      </div>
-    </div>
+    </li>
   </transition>
 </template>
 

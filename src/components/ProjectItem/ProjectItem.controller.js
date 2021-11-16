@@ -1,4 +1,13 @@
-import showdown from "showdown";
+export default {
+  name: "project-item",
+  props: ["item", "visibleItem", "index", "direction"],
+  data: () => ({ comilla: '"' }),
+  methods: {},
+};
+/*
+
+// This is for conver Markdown to HTML
+import showdown from "showdown"; 
 
 const convert = (toConvert) => {
   const sho = new showdown.Converter({
@@ -10,16 +19,4 @@ const convert = (toConvert) => {
   console.log(toConvert);
   return sho.makeHtml(toConvert);
 };
-
-export default {
-  name: "project-item",
-  props: ["item", "visibleItem", "index", "direction"],
-  methods: {
-    getItem: (item) => {
-      return convert(item.description);
-      // if (typeof item.description !== "string")
-      //   return item.description.join("");
-      // else return item.description;
-    },
-  },
-};
+*/
