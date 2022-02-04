@@ -103,9 +103,9 @@
           </section>
           <!-- End Lenguages -->
 
-          <!-- Hobies -->
+          <!-- Hobbies -->
           <section id="hobies" class="panel">
-            <h2>Hobies</h2>
+            <h2>Hobbies</h2>
             <div class="data">
               <ul>
                 <li>- Programming and learn about that</li>
@@ -114,7 +114,7 @@
               </ul>
             </div>
           </section>
-          <!-- End Hobies -->
+          <!-- End Hobbies -->
           <!-- Goals -->
           <section id="goals-to-learn" class="panel">
             <h2>Goals to Learn</h2>
