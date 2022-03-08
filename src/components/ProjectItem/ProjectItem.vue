@@ -6,7 +6,7 @@
         <div class="card__overlay">
           <div class="card__header">
             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
+              <path />]ik
             </svg>
             <div class="card__header-text">
               <h3 class="card__title">{{ item.title }}</h3>
