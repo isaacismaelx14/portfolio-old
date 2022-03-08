@@ -25,9 +25,9 @@
           <div class="card__description">
             <p>{{ item.summary }}</p>
             <div class="card__link">
-              <a :href="item.github" target="_blank" class="btn__github">
+              <a :href="item.link" target="_blank" class="btn__github">
                 <span class="">
-                  View on github
+                  {{item.btn}}
                 </span>
               </a>
             </div>
