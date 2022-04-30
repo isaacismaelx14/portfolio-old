@@ -10,8 +10,7 @@
               class="no-selection img"
               loading="lazy"
             />
-            <div class="subtitle">Frontend &amp; Backend</div>
-            <div class="subtitle">Developer</div>
+            <div class="subtitle">FullStack Developer</div>
           </div>
           <h1 class="title" id="HeaderTitle">
             <span>&lt;</span> Hi, I'm Isaac Martinez <span>/&gt;</span>
